@@ -20,5 +20,15 @@ services:
       PORT: 3000
       API_HOST: http://bff:3000
     depends_on:
-      - svc
       - bff
+
+  keycloak:
+    image: keycloak/keycloak
+    ports:
+      - 8080:8080
+    command: "start-dev"
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    depends_on:
+      - ui
