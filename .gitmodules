@@ -1,0 +1,9 @@
+[submodule "inv-ui-team1"]
+	path = inv-ui-team1
+	url = https://github.com/cloud-design-patterns-journey/inv-ui-team1.git
+[submodule "inv-bff-team1"]
+	path = inv-bff-team1
+	url = https://github.com/cloud-design-patterns-journey/inv-bff-team1.git
+[submodule "inv-svc-team1"]
+	path = inv-svc-team1
+	url = https://github.com/cloud-design-patterns-journey/inv-svc-team1.git
