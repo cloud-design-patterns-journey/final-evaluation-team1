@@ -1,0 +1,24 @@
+services:
+  svc:
+    build:
+      context: inv-svc-team1
+
+  bff:
+    build:
+      context: inv-bff-team1
+    environment:
+      SERVICE_URL: http://svc:8080
+    depends_on:
+      - svc
+
+  ui:
+    build:
+      context: inv-ui-team1
+    ports:
+      - 3000:3000
+    environment:
+      PORT: 3000
+      API_HOST: http://bff:3000
+    depends_on:
+      - svc
+      - bff
